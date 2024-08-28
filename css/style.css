@@ -1,14 +1,13 @@
 /* Colores */
 :root {
-    --primario: #f06319;
-    --naranja: #ec6b23;
-    --secundario: #fc2c03;
-    --rosa: #e40d56;
-    --rosa2:#e51156;
-    --rosa3: #de066d;
+    --Grisoscuro: #1E201E;
+    --Grisclaro: #3C3D37;
+    --Beige: #ECDFCC;
+    --Verde: #6A9C89;
     --obscuro: #1c1a25;
     --blanco: #ffffff;
     --gris: #808080;
+    --dona: #3c3d3a;
 }
 /* Globales */
 html{
@@ -21,9 +20,11 @@ html{
 }
 
 body{
-    font-size: 16px; /*1Rem = 10px*/
+    font-size: 1.6rem; /*1Rem = 10px*/
+    margin: 0;
+    padding: 0;
     font-family: "Roboto Condensed", sans-serif;
-    background-color: var(--obscuro);
+    background-color: var(--Grisoscuro);
 }
 
 /* Tipografía */
@@ -49,83 +50,88 @@ p {
 
 /* Header */
 
-.log-nom {
+.contenido-hd {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+}
+
+.contenido-hd h1 {
+    color: var(--blanco);
     padding: 1rem;
 }
 
-.log-nom h1 {
-    color: var(--blanco);
-    padding-left: 2rem;
-}
-
-.logo{
-    width: 10rem; /* Ajusta el tamaño según sea necesario */
-    height: 10rem; /* Ajusta el tamaño según sea necesario */
+.logo {
     background-image: url(sources/END_LOGO.png);
-    background-size: contain; /* Asegura que la imagen se ajuste al contenedor */
+    height: 8rem;
+    width: 8rem;
     background-repeat: no-repeat;
-    background-position: center;
+    background-size: cover;
 }
 
+.video{
+    height: auto;
+    width: auto;
+}
+.video img {
+    height: 20rem;
+    width: 25rem;
+    margin: 20rem 10rem;
+}
 
 /* Barra de navegación */
 
-.nav-bar {
-    background-color: var(--naranja);
+.nav-bg {
+    background-color: var(--Grisclaro);
 }
 
 .cont-navbar {
     display: flex;
-    flex-direction: column;
+    margin: 0 0.5rem;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
-
-.cont-navbar a{
-    color: var(--blanco);
+.cont-navbar a {
+    color: white;
     text-decoration: none;
-    font-size: 2rem;
+}
+
+/* CONTENIDO DONATIVO */
+.cont-donativo {
+    display: flex;
+    background-color: var(--Grisclaro);
     padding: 1rem;
 }
 
-.cont-navbar a:hover {
-    background-color: var(--rosa3);
-    color: var(--obscuro);
-    transition: .5s;
+.cont-info{
+    background-color: var(--dona);
+    margin: 2rem;
+    border-radius: 30px;
+    text-align: justify;
+    border: 0.2rem solid black;
+    padding: 0.1rem 3rem;
 }
 
-/* Donativo */
+.cont-info h2{
+    text-align: center;
+}
 
-.donativo {
-    display: flex;
-
+.cont-info p{
+    color: #1c1a25
 }
 
 .donativo{
-    -webkit-box-shadow: 15px 13px 0px -8px rgba(148,148,148,0.44);
-    -moz-box-shadow: 15px 13px 0px -8px rgba(148,148,148,0.44);
-    box-shadow: 15px 13px 0px -8px rgba(148,148,148,0.44);
-    background-color: var(--blanco);
-    padding: 2rem;
-    border-radius: 1rem;
+    background-color: var(--dona);
+    margin: 2rem;
+    border-radius: 30px;
+    border: 0.2rem solid black;
+    padding: 3rem;
 }
 
-/* Barra de navegación */
-@media (min-width: 768px) {
-    .cont-navbar {
-        flex-direction: row;
-    }
-
-    .log-nom {
-        flex-direction: row;
-    }
-}
-
-
+/* .cont-info p{
+    color: #1c1a25;
+} */
 
 /*
 body{
@@ -181,4 +187,4 @@ body{
     top: 50%;
     padding: 1rem;
     
-}*/
+} */
