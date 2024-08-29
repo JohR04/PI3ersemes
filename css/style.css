@@ -1,13 +1,14 @@
 /* Colores */
 :root {
     --Grisoscuro: #1E201E;
-    --Grisclaro: #3C3D37;
+    --Grisclaro: #DFDFDF;
     --Beige: #ECDFCC;
-    --Verde: #6A9C89;
-    --obscuro: #1c1a25;
+    --Verde: #0CA789;
+    --VerdeHover: #098169;
     --blanco: #ffffff;
-    --gris: #808080;
-    --dona: #3c3d3a;
+    --Footer: #1A1A1A;
+    --dona: #E6E6E6;
+    
 }
 /* Globales */
 html{
@@ -24,7 +25,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Roboto Condensed", sans-serif;
-    background-color: var(--Grisoscuro);
+    background-color: var(--blanco);
 }
 
 /* Tipografía */
@@ -72,16 +73,23 @@ p {
     height: auto;
     width: auto;
 }
+
 .video img {
-    height: 20rem;
-    width: 25rem;
-    margin: 20rem 10rem;
-}
+    margin: 2rem;
+    /* height: 20rem;*/
+    width: 95%;
+    /* margin: 20rem 10rem; */
+} 
 
 /* Barra de navegación */
 
 .nav-bg {
-    background-color: var(--Grisclaro);
+    background-color: var(--Grisoscuro);
+    /* display: flex; */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .cont-navbar {
@@ -90,6 +98,8 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
+    /* position: fixed; */
+    /* z-index: 1000; */
 }
 
 .cont-navbar a {
@@ -98,10 +108,26 @@ p {
 }
 
 /* CONTENIDO DONATIVO */
+
+.titulo-donativo {
+    background-color: #1c1a25;
+    padding: 1.5rem;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.titulo-donativo h2 {
+    color: white;
+}
+
 .cont-donativo {
     display: flex;
     background-color: var(--Grisclaro);
     padding: 1rem;
+    /* height: 100%; */
+    margin: 0rem 7.5rem;
+    margin-bottom: 3rem;
 }
 
 .cont-info{
@@ -109,7 +135,9 @@ p {
     margin: 2rem;
     border-radius: 30px;
     text-align: justify;
-    border: 0.2rem solid black;
+    max-width: 50%;
+    /* height: 100%; */
+    /* border: 0.2rem solid black; */
     padding: 0.1rem 3rem;
 }
 
@@ -122,13 +150,74 @@ p {
 }
 
 .donativo{
+    /* display: inline-block; */
+    display: block;
     background-color: var(--dona);
-    margin: 2rem;
+    width: 50%;
     border-radius: 30px;
-    border: 0.2rem solid black;
-    padding: 3rem;
+    padding: 0.1rem 3rem;
+    text-align: center;
 }
 
+.donativo h2{
+    text-align: center;
+}
+
+/* DISEÑOS DE LOS BOTONES */
+.donativo .boton {
+    color: #fff;
+    background-color: var(--Verde);
+    border-color: var(--Verde);
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    width: 20%;
+    margin: 13px;
+}
+
+.donativo .boton:hover {
+    background-color: var(--VerdeHover);
+    border-color: var(--VerdeHover);
+}
+
+.donativo .boton-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los botones se acomoden en filas si es necesario */
+    gap: 10px; /* Añade espacio entre los botones */
+}
+
+/* FOOTER */
+.footer{
+    display: flex;
+    background-color: var(--Footer);
+}
+
+.footer h2{
+    color: white;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer .espacio-logo {
+    width: 30%;
+    /* justify-self: center; */
+}
+
+.footer .registro {
+    width: 30%;
+    ;
+}
+
+.footer .informacion {
+    width: 30%;
+}
 /* .cont-info p{
     color: #1c1a25;
 } */
