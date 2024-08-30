@@ -2,6 +2,7 @@
 :root {
     --Grisoscuro: #1E201E;
     --Grisclaro: #DFDFDF;
+    --Gris: #808080;
     --Beige: #ECDFCC;
     --Verde: #0CA789;
     --VerdeHover: #098169;
@@ -85,6 +86,9 @@ p {
 
 .nav-bg {
     background-color: var(--Grisoscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     /* display: flex; */
     position: -webkit-sticky;
     position: sticky;
@@ -92,14 +96,23 @@ p {
     z-index: 1000;
 }
 
+.zona-izq{
+    display: flex;
+    align-items: center;
+}
+
+.zona-izq h1{
+    margin-left: 10px;
+    color: var(--blanco);
+}
+
 .cont-navbar {
     display: flex;
     margin: 0 0.5rem;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding: 1.5rem;
-    /* position: fixed; */
-    /* z-index: 1000; */
 }
 
 .cont-navbar a {
@@ -157,6 +170,7 @@ p {
     border-radius: 30px;
     padding: 0.1rem 3rem;
     text-align: center;
+    /* align-items: center; */
 }
 
 .donativo h2{
@@ -183,6 +197,20 @@ p {
     border-color: var(--VerdeHover);
 }
 
+.donativo .boton-aceptar {
+    color: var(--blanco);
+    background-color: var(--Gris);
+    border-color: var(--Gris);
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    width: 20%;
+    margin: 1.5rem;
+}
+
 .donativo .boton-container {
     display: flex;
     justify-content: center;
@@ -194,30 +222,37 @@ p {
 .footer{
     display: flex;
     background-color: var(--Footer);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
-.footer h2{
-    color: white;
-}
-
-.footer a{
-    text-decoration: none;
-    color: white;
-}
-
-.footer .espacio-logo {
-    width: 30%;
-    /* justify-self: center; */
+.footer > div {
+    flex: 1;
+    text-align: center;
 }
 
 .footer .registro {
     width: 30%;
-    ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.footer .informacion {
-    width: 30%;
+
+.footer h2, .footer p, .footer a {
+    /* margin-bottom: 10px; */
+    color: var(--blanco);
 }
+
+.footer .espacio-logo {
+    max-width: 15rem;
+    /* margin-bottom: 2rem; */
+}
+
 /* .cont-info p{
     color: #1c1a25;
 } */
